@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: url('images/wall-texture.jpg'), rgba(247, 244, 241, 0.6);
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* CLOCK */
+.clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        to right,
+        rgb(238, 238, 240),
+        rgb(174, 174, 182)
+    );
+    border-radius: 100%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), 4px 12px 12px rgba(0, 0, 0, 0.1);
+}
+
+.clock .clock-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('images/clock-face.png');
+    background-size: 95%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.clock .hour-hand {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('images/hour-hand.png');
+    background-size: 95%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.clock .minute-hand {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('images/minute-hand.png');
+    background-size: 95%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.clock .second-hand {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('images/second-hand.png');
+    background-size: 95%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* CURRENT DAY TEXT */
+.current-day {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 1.25rem;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* ANIMATIONS */
+.clock {
+    animation: fadeInOpacity 2s;
+}
+
+.current-day {
+    animation: fadeInOpacity 2s;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
