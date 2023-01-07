@@ -2,8 +2,6 @@
 
 A simple front end analog clock using HTML, CSS and JavaScript.
 
-> Note: On the top right corner of the clock, there is a button to toggle sound on/off. (The sound is really low, so you might not hear it, like a real clock!)
-
 ## Live Demo
 
 [Check it out here](https://emanuelefavero.github.io/analog-clock/)
@@ -11,6 +9,13 @@ A simple front end analog clock using HTML, CSS and JavaScript.
 #### Screenshot
 
 <img src="screenshot.png" alt="screenshot" width="300">
+
+## Features
+
+- **Dark mode** - _toggle with the dark mode button in the top right corner_
+- **Sound** - _toggle with the sound button in the top right corner_
+
+> Note: The sound is really low, so you might not hear it, like a real clock!
 
 ## How to use locally
 
