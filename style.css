@@ -21,20 +21,23 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* MUTE BUTTON */
-.mute-button {
+/* MENU */
+.menu {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  /* width: 2rem; */
-  /* height: 2rem; */
-  background: none;
-  font-size: 0.875rem;
   border: none;
-  cursor: pointer;
 }
 
-.mute-button:hover {
+.menu button {
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 0.6rem;
+}
+
+button:hover {
   filter: brightness(1.1);
 }
 
@@ -118,4 +121,18 @@ body {
   100% {
     opacity: 1;
   }
+}
+
+/* DARK MODE */
+body.dark-mode {
+  background: url('images/wall-texture-dark.jpg'), rgba(7, 7, 8, 0.42);
+
+  background-blend-mode: soft-light;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.current-day.dark-mode {
+  color: white;
 }
