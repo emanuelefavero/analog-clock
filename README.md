@@ -16,3 +16,7 @@ A simple front end analog clock using HTML, CSS and JavaScript.
 
 1. Clone the repository
 2. Open the `index.html` file in your browser
+
+## License
+
+[MIT](LICENSE)
