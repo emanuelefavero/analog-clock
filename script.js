@@ -1,27 +1,38 @@
-const secondHand = document.getElementById('secondHand');
-const minuteHand = document.getElementById('minuteHand');
-const hourHand = document.getElementById('hourHand');
-// const audioButton = document.getElementById('audioButton');
-// const audio = new Audio('sounds/analog-clock-tick.mp3');
+const secondHand = document.getElementById('secondHand')
+const minuteHand = document.getElementById('minuteHand')
+const hourHand = document.getElementById('hourHand')
 
-setInterval(clockRotating, 1000);
+const audio = new Audio('sounds/analog-clock.ogg')
+audio.loop = false
+audio.muted = true
+
+setInterval(clockRotating, 1000)
 function clockRotating() {
-    const date = new Date();
-    const getSeconds = date.getSeconds() / 60;
-    const getMinutes = date.getMinutes() / 60;
-    const getHours = date.getHours() / 12;
+  const date = new Date()
+  const getSeconds = date.getSeconds() / 60
+  const getMinutes = date.getMinutes() / 60
 
-    secondHand.style.transform = 'rotate(' + getSeconds * 360 + 'deg)';
-    minuteHand.style.transform = 'rotate(' + getMinutes * 360 + 'deg)';
-    hourHand.style.transform = 'rotate(' + getHours * 360 + 'deg)';
+  // Accurate hour movement
+  const getHours = (date.getHours() + date.getMinutes() / 60) / 12
 
-    // CURRENT DAY, EXAMPLE: "Fri Jun 11 2021"
-    document.getElementById('currentDay').innerHTML = date.toDateString();
+  secondHand.style.transform = 'rotate(' + getSeconds * 360 + 'deg)'
+  minuteHand.style.transform = 'rotate(' + getMinutes * 360 + 'deg)'
+  hourHand.style.transform = 'rotate(' + getHours * 360 + 'deg)'
+
+  document.getElementById('currentDay').innerHTML = date.toDateString()
+  audio.pause()
+  audio.currentTime = 0
+  audio.play()
 }
 
-// PLAY AUDIO
-// audioButton.addEventListener('click', (e) => {
-//     audio.play();
-//     audio.loop = true;
-//     e.preventDefault();
-// });
+// mute button
+const muteButton = document.getElementById('muteButton')
+muteButton.addEventListener('click', () => {
+  audio.muted = !audio.muted
+
+  if (audio.muted) {
+    muteButton.innerHTML = '🔕'
+  } else {
+    muteButton.innerHTML = '🔔'
+  }
+})
