@@ -24,4 +24,4 @@ A simple front end analog clock using HTML, CSS and JavaScript.
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE.md)
